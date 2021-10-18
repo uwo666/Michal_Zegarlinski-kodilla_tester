@@ -14,7 +14,7 @@ public class Grades {
         this.size++;
     }
     public int lastAdded(int value) {
-        return grades[this.size];
+        return this.grades[this.size];
     }
     public int averageGrade(int[] grades) {
         int result = 0;
