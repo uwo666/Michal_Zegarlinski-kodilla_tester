@@ -6,7 +6,7 @@ public class RandomNumbers {
             int min = 0;
             int max = 0;
             int sum = 0;
-            while (sum < 5000) {
+            while (sum <5000) {
                 int temp = random.nextInt(31);
                 if (temp > max) max = temp;
                 if (temp < min) min = temp;
