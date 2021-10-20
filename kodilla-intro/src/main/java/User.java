@@ -23,18 +23,26 @@ public class User {
         User frankie = new User("Frankie", 45);
         User[] users = {anna, betty, carl, david, eva, frankie};
 
+
+
     }
     public int averageAge(int[] users) {
         int result = 0;
-        for (int i = 0; i<users.length; i++) {
-            result = (result + age)/users.length;
+        for (int i = users[age]; i<122; i ++) {
+            result = (result + users[age])/users.length;
         }
         return result;
-
-
     }
     public int usersUnderAverageAge(int[] users) {
-            for (int i = 0; i<; )
-
+            int average = averageAge(users);
+            int result = 0;
+            for (int i = age; i<average; i++){
+                if (result < average){
+                    System.out.println(name);
+                }
+            }
+            return result;
     }
+
+
 }
