@@ -7,18 +7,23 @@ public class Colors {
             System.out.println("Please enter the first letter of the color and I will guess what color it is");
             String calc = scanner.nextLine().trim().toUpperCase();
             switch (calc) {
-                case "A": return "ADD";
-                case "S": return "SUB";
-                case "D": return "DIV";
-                case "M": return "MUL";
+                case "A":
+                    return "Alizarin";
+                case "B":
+                    return "Blue";
+                case "C":
+                    return "Cherry";
+                case "D":
+                    return "Denim";
+                case "F":
+                    return "Fuchsia";
                 default:
-                    System.out.println("Wrong calculation. Try again.");
+                    System.out.println("Sorry I do not know this color please specify another.");
             }
         }
     }
     public static void main(String[] args) {
-        Colors colors = new Colors();
-        double result = calculator.calculate();
-        System.out.println("Result: " + result);
+        String result = getUserSelection();
+        System.out.println(result);
     }
 }
