@@ -15,5 +15,5 @@ public class RandomNumbers {
             System.out.println(sum);
             System.out.println("max to " + max);
             System.out.println("Min to " + min);
-        }
+    }
 }
