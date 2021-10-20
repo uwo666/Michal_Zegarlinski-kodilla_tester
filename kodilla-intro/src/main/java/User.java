@@ -19,8 +19,9 @@ public class User {
         User[] users = {anna, betty, carl, david, eva, frankie};
         int result = 0;
         for (int i = 0; i < users.length; i++) {
-            result = (result + users[i].age) / users.length;
-            if (users[i].age < result) {
+            result = (result + users[i].age);
+            int avrageAge = result / users.length;
+            if (users[i].age < avrageAge) {
                 System.out.println(users[i].name);
             }
 
