@@ -13,7 +13,7 @@ public class RandomNumbers {
                 sum = sum + temp;
             }
             System.out.println(sum);
-            System.out.println("max to" + max);
-            System.out.println("Min to" + min);
+            System.out.println("max to " + max);
+            System.out.println("Min to " + min);
         }
 }
