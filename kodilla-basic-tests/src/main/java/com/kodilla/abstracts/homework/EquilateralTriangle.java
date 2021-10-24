@@ -10,11 +10,15 @@ public class EquilateralTriangle extends Shape {
 
     @Override
     public int calcSurfaceArea() {
-        return 0;
+        int result;
+        result = getBase() * getHeight();
+        return result;
     }
 
     @Override
     public int calcPerimeter() {
-        return 0;
+        int result = 0;
+        result = getBase() * 3;
+        return result;
     }
 }
