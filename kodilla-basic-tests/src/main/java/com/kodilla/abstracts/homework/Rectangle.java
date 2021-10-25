@@ -8,11 +8,14 @@ public class Rectangle extends Shape{
 
     @Override
     public int calcSurfaceArea() {
-        return 0;
+       int result = getBase() * getHeight();
+        return result;
     }
 
     @Override
     public int calcPerimeter() {
         return 0;
     }
+
+
 }
