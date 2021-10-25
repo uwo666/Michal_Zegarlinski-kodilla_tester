@@ -1,7 +1,7 @@
 package com.kodilla.abstracts.homeworkJob;
 
 public class Developer extends Job{
-    public Developer(int salary, String responsibilities) {
+    public Developer() {
         super(3000, "Software development");
     }
 }
