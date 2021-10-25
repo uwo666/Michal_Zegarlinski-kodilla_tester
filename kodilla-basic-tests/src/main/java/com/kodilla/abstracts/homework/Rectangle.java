@@ -3,7 +3,7 @@ package com.kodilla.abstracts.homework;
 public class Rectangle extends Shape{
 
     public Rectangle() {
-        super(2, 5);
+        super(2, 4);
     }
 
     @Override
@@ -14,7 +14,8 @@ public class Rectangle extends Shape{
 
     @Override
     public int calcPerimeter() {
-        return 0;
+        int result = (2 * getBase()) + (2 * getHeight());
+        return result;
     }
 
 
