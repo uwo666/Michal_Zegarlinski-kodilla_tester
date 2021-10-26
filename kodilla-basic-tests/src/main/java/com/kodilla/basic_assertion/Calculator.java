@@ -10,8 +10,13 @@ public class Calculator {
         return a - b;
     }
 
-    public int square(int a){
+    public double square(double a){
         return a * a;
+    }
+
+    public double delta(double expected, double actual) {
+        double delta =  expected - actual ;
+        return delta;
     }
 }
 
