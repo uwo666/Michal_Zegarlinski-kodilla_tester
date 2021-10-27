@@ -20,8 +20,8 @@ public class User {
         int result = 0;
         for (int i = 0; i < users.length; i++) {
             result = (result + users[i].age);
-            int avrageAge = result / users.length;
-            if (users[i].age < avrageAge) {
+            int averageAge = result / users.length;
+            if (users[i].age < averageAge) {
                 System.out.println(users[i].name);
             }
 
