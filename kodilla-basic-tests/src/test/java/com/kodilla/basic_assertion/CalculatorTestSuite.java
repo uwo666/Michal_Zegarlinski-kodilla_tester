@@ -43,6 +43,6 @@ public class CalculatorTestSuite {
         Calculator calculator = new Calculator();
         double a = 0.13579;
         double squareResult = calculator.square(a);
-        assertEquals(0.01843, squareResult,0.1834);
+        assertEquals(0.01843, squareResult,0.001);
     }
 }
