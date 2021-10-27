@@ -24,6 +24,20 @@ public class CashMachine {
     public int[] getValues() {
         return values;
     }
+    public double balances() {
+        if (this.values.length == 0) {
+            return 10000;
+        }
+        double sum = 0;
+        for (int i = 0; i < this.values.length; i++) {
+            sum += this.values[i];
+        }
+        return sum;
+    }
+
+    public int getNumberOfExecutedTransactions()  {
+        return size;
+    }
 
 
 }
