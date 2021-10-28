@@ -35,7 +35,7 @@ public class Bank {
         return sum;
     }
 
-    public int allDeposits(){
+    public int allDepositsTransactions(){
         if (this.cashMachines.length == 0)
             return 0;
 
@@ -45,6 +45,39 @@ public class Bank {
         }
         return sum;
 
+    }
+
+    public int allCreditTransactions() {
+        if (this.cashMachines.length == 0)
+            return 0;
+
+        int sum = 0;
+        for (int i = 0; i < this.cashMachines.length; i++) {
+            sum += this.cashMachines[i].sumNumberOfCredits();
+        }
+        return sum;
+    }
+
+    public int averageDeposit() {
+        if (this.cashMachines.length == 0)
+            return 0;
+
+        int sum = 0;
+        for (int i = 0; i < this.cashMachines.length; i++) {
+            sum += this.cashMachines[i].sumOfDeposits();
+        }
+        return sum/this.cashMachines.length;
+    }
+
+    public int averageCredit() {
+        if (this.cashMachines.length == 0)
+            return 0;
+
+        int sum = 0;
+        for (int i = 0; i < this.cashMachines.length; i++) {
+            sum += this.cashMachines[i].sumOfCredits();
+        }
+        return sum/this.cashMachines.length;
     }
 
 }
