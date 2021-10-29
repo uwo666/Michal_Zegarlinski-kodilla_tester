@@ -1,4 +1,5 @@
 package com.kodilla.collections.interfaces.homework;
+import java.util.Random;
 
 public class AlfaRomeo implements Car{
    private int speed;
@@ -13,9 +14,10 @@ public class AlfaRomeo implements Car{
     }
 
     @Override
-    public void increaseSpeed() {
-        speed+=20;
-
+    public int increaseSpeed() {
+        Random random = new Random();
+        speed+=  random.nextInt(60);
+        return speed;
 
     }
 

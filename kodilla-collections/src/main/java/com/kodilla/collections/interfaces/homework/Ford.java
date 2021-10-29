@@ -1,5 +1,7 @@
 package com.kodilla.collections.interfaces.homework;
 
+import java.util.Random;
+
 public class Ford implements Car{
     private int speed;
 
@@ -13,8 +15,10 @@ public class Ford implements Car{
     }
 
     @Override
-    public void increaseSpeed() {
-        speed+=30;
+    public int increaseSpeed() {
+        Random random = new Random();
+        speed+=  random.nextInt(60);
+        return speed;
     }
 
     @Override
