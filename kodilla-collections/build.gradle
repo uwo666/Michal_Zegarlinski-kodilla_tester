@@ -2,11 +2,10 @@ plugins {
     id 'java'
 }
 
-<<<<<<< HEAD
+
 group 'com.kodilla'
-=======
 group 'com..kodilla'
->>>>>>> origin/master
+
 version '1.0-SNAPSHOT'
 
 repositories {
