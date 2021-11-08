@@ -1,15 +1,15 @@
 package com.kodilla.collections.adv.immutable;
 
-public class BookHacked extends Book{
+//public class BookHacked extends Book{
 //    private String realTitle;
 
-    public BookHacked(String author, String title) {
-    super(author, title);
+//    public BookHacked(String author, String title) {
+//    super(author, title);
 //    realTitle = title; // obejscie final
-}
+//}
 
-    public void modifyTitle(String newTitle) { // obejście protected
-        title = newTitle;}
+//    public void modifyTitle(String newTitle) { // obejście protected
+//        title = newTitle;}
 
 //    public void modifyTitle(String newTitle) {
 //        realTitle = newTitle;
@@ -19,4 +19,4 @@ public class BookHacked extends Book{
 //    public String getTitle() {
 //        return realTitle;
 //    }
-}
+//}
