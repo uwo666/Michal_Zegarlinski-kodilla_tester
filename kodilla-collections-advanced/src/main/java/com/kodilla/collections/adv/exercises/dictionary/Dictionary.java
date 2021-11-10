@@ -18,12 +18,13 @@ public class Dictionary {
             if (englishWord.getPartOfSpeech().equals(partOfSpeech))
                 result.add(englishWord);
         }
-        return dictionary.getOrDefault(polishWord, Collections.emptyList());
+//        return dictionary.getOrDefault(polishWord, Collections.emptyList());
+        return result;
     }
 
-    public List<EnglishWord> findEnglishWorlds(String polishWord, PartOfSpeech partOfSpeech){
-        return Collections.emptyList();
-    }
+//    public List<EnglishWord> findEnglishWorlds(String polishWord, PartOfSpeech partOfSpeech){
+//        return Collections.emptyList();
+//    }
 
     public int size(){
         return dictionary.size();
