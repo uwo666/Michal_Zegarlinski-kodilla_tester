@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FlightFinder {
+
     public List<Flight> findFlightsFrom(String departure) {
         List<Flight> flightresult = new ArrayList<>();
         for (Flight flight : FlightRepository.getFlightsTable()) {
@@ -24,4 +25,7 @@ public class FlightFinder {
         }
         return flightresult;
     }
+
+
+
 }

@@ -22,9 +22,9 @@ public class Dictionary {
         return result;
     }
 
-//    public List<EnglishWord> findEnglishWorlds(String polishWord, PartOfSpeech partOfSpeech){
-//        return Collections.emptyList();
-//    }
+    public List<EnglishWord> findEnglishWorlds(String polishWord){
+        return Collections.emptyList();
+    }
 
     public int size(){
         return dictionary.size();
