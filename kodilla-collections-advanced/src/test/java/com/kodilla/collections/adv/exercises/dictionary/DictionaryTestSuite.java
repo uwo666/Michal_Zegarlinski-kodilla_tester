@@ -1,5 +1,6 @@
 package com.kodilla.collections.adv.exercises.dictionary;
 
+import com.kodilla.collections.adv.exercises.homework.FlightRepository;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -53,4 +54,7 @@ class DictionaryTestSuite {
         expectedList.add(new EnglishWord(PartOfSpeech.NOUN, "brotherhood"));
         assertEquals(expectedList, result);
     }
+
+
+
 }
