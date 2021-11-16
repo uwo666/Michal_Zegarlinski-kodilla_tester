@@ -1,13 +1,21 @@
 package com.kodilla.exception.homework;
 
 
-import static com.kodilla.exception.homework.Warehouse.orders;
-
 public class WarehouseApp {
     public static void main(String[] args) {
-        orders.add(new Order("1"));
-        orders.add(new Order("2"));
-        orders.add(new Order("3"));
-        orders.add(new Order("4"));
+        Warehouse warehouse = new Warehouse();
+        warehouse.addOrder(new Order("first"));
+        warehouse.addOrder(new Order("Second"));
+        warehouse.addOrder(new Order("third"));
+        try {
+            Order isOrderExist = warehouse.getOrder("four");
+            System.out.println(("Four status" + isOrderExist));
+        } catch (
+                OrderDoesntExistException e) {
+            System.out.println("Sorry, we don`t have this order.");
+
+        } finally {
+            System.out.println("Thank you for using our service");
+        }
     }
 }
