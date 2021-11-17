@@ -11,7 +11,7 @@ public class Application {
         students.add(new Student("Tonny Stark", null));
         students.add(new Student("Jessica Johns", new Teacher("Terry Shepard")));
 
-        Optional<List<Student>> optionalStudent =  Optional.ofNullable(students);
+
 
         for (Student student : students) {
             System.out.println("Student: " + student.getName()+ " "+ student.getTeacher());

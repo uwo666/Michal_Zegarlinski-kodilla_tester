@@ -11,10 +11,13 @@ public class Warehouse {
     }
 
     public Order getOrder(String number) throws OrderDoesntExistException {
-        orders.stream().filter(u -> u.getNumber().equals(number))
+        orders.stream().filter(order -> order.getNumber().equals(number))
                .forEach(un ->System.out.println( "your order is " + number));
-        if (orders.contains(number))
-            return orders.get(Integer.parseInt(number));
+        for(Order order : orders){
+            if(order.getNumber().equals(number)){
+                return order;
+            }
+        }
         throw new OrderDoesntExistException();
 
     }

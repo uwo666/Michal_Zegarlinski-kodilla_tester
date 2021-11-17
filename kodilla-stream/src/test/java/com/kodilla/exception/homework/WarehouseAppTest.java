@@ -8,17 +8,19 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class WarehouseAppTest {
     @Test
-    public void isOrderExist() throws OrderDoesntExistException {
+    public void testisOrderExist() throws OrderDoesntExistException {
         // given
         Warehouse warehouse = new Warehouse();
+        warehouse.addOrder(new Order("first"));
         // when
         Order isFirstExist = warehouse.getOrder("first");
         // then
-        assertEquals("first",isFirstExist);
+        assertNotNull(isFirstExist);
+        assertEquals("first",isFirstExist.getNumber() );
     }
 
     @Test
-    public void testIsAirportInUse_withException() {
+    public void testisOrderExist_withException() {
         // given
         Warehouse warehouse = new Warehouse();
         // when
