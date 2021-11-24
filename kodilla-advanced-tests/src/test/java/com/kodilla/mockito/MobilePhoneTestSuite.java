@@ -4,8 +4,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 public class MobilePhoneTestSuite {
     MobilePhone myPhone = Mockito.mock(MobilePhone.class);
 
@@ -29,9 +27,9 @@ public class MobilePhoneTestSuite {
     }
 
     @Test
-    public void testVerificationFailure() {
+    public void testVerificationFailure() { // błedny test
         myPhone.needsCharging();
-        Mockito.verify(myPhone).getFreeStorage();
+        Mockito.verify(myPhone).getFreeStorage();// weryfikacja innej metody niż przekazanej
     }
 
 }

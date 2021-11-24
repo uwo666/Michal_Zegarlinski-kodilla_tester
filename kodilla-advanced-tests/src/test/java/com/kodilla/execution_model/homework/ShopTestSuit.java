@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -31,10 +32,10 @@ class ShopTestSuit {
     @Test
     public void shouldGetOrdersBetweenDate() {
         //when
-        Order result = shop.getorder(LocalDate.of(2021,10,01),
+        List<Order> result = shop.getorder(LocalDate.of(2021,10,1),
                 LocalDate.of(2021,10,29));
         //then
-       assertEquals(0, result);
+       assertEquals(2, result.size());
 
 
     }
@@ -42,17 +43,17 @@ class ShopTestSuit {
     @Test
     public void shouldGetOrdersMinAndMaxValue() {
         //when
-        Order result = shop.valueRange(500, 2000);
+        List<Order> result = shop.valueRange(500, 2000);
         //then
-        assertEquals(0, result);
+        assertEquals(1, result.size());
 
     }
 
     @Test
     public void shouldGetSumOfOrders() {
-        Order result = shop.valueSum();
+        int result = shop.valueSum();
         //then
-        assertEquals(0, result);
+        assertEquals(3500, result);
 
     }
 }
