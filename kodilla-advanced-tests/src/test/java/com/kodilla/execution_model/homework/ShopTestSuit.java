@@ -11,8 +11,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class ShopTestSuit {
     Shop shop = new Shop();
     Order order1 = new Order(500,"Andrew", LocalDate.of(2021,11,13));
-    Order order2 = new Order(1000,"Matthew", LocalDate.of(2021,10,01));
-    Order order3 = new Order(2000,"Scott", LocalDate.of(2021,10,29));
+    Order order2 = new Order(1000,"Matthew", LocalDate.of(2021,10,2));
+    Order order3 = new Order(2000,"Scott", LocalDate.of(2021,10,28));
 
     @BeforeEach
     public void initializeOrders() {
