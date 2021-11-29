@@ -38,11 +38,13 @@ public class WeatherService {
     }
 
     public void removeLocation(Location location){
-        this.clients.remove(location);
+        this.clients.put(location, new HashSet<>());
 
     }
 
     public void sendNotificationToAll(Notification notification){
+        for (Set<Client> clients : clients.values())
+            clients.forEach(client -> client.receive(notification));
 
     }
 
