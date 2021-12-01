@@ -38,7 +38,7 @@ public class WeatherService {
     }
 
     public void removeLocation(Location location){
-        this.clients.put(location, new HashSet<>());
+        this.clients.remove(location);
 
     }
 
@@ -48,7 +48,9 @@ public class WeatherService {
 
     }
 
-    public void sendNotificationToLocation(Notification notification, Location location){
-        this.clients.get(location).forEach(client->client.receive(notification));
+    public void sendNotificationToLocation(Notification notification, Location location) {
+        if (this.clients.containsKey(location)) {
+            this.clients.get(location).forEach(client -> client.receive(notification));
+        }
     }
 }

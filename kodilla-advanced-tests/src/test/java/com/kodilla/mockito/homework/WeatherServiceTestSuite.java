@@ -14,6 +14,15 @@ class WeatherServiceTestSuite {
     Notification notification = Mockito.mock(Notification.class);
     Location location = Mockito.mock(Location.class);
 
+    @Test
+    public void SholdSendNaotyficationToClientWithoutLocation(){
+        weatherService.addSubscriberToLocalisation(client,location);
+        Client client2 = Mockito.mock(Client.class);
+        weatherService.sendNotificationToLocation(notification, location);
+        Mockito.verify(client, Mockito.times(1)).receive(notification);
+        Mockito.verify(client2, Mockito.never()).receive(notification);
+    }
+
 
 
 

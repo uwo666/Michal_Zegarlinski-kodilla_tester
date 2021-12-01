@@ -26,10 +26,10 @@ public class MobilePhoneTestSuite {
         Mockito.verify(myPhone).launchApplication("Tetris4D");
     }
 
-    @Test
-    public void testVerificationFailure() { // błedny test
-        myPhone.needsCharging();
-        Mockito.verify(myPhone).getFreeStorage();// weryfikacja innej metody niż przekazanej
-    }
+//    @Test
+//    public void testVerificationFailure() { // błedny test
+//        myPhone.needsCharging();
+//        Mockito.verify(myPhone).getFreeStorage();// weryfikacja innej metody niż przekazanej
+//    }
 
 }
