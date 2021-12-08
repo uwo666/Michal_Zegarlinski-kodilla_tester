@@ -6,7 +6,7 @@ public class Cabrio implements Car{
     @Override
     public boolean hasHeadlightsTurnedOn() {
         LocalTime time = LocalTime.now();
-        if (time.isAfter(LocalTime.of(22, 00)) || time.isBefore(LocalTime.of(5, 00))){
+        if (time.isAfter(LocalTime.of(22, 0)) || time.isBefore(LocalTime.of(5, 0))){
             return true;
         } else return false;
     }

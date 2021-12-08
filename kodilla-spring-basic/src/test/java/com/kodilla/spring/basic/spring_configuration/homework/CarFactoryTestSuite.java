@@ -6,6 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.time.LocalTime;
 import java.util.Arrays;
 import java.util.List;
 
@@ -17,8 +18,11 @@ public class CarFactoryTestSuite {
         //Given
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
         Car car = (Car) context.getBean("createCar");
+        LocalTime time = LocalTime.now();
         boolean lights = car.hasHeadlightsTurnedOn();
-        Assertions.assertTrue(lights);
+        if (time.isAfter(LocalTime.of(22, 0)) || time.isBefore(LocalTime.of(5, 0))){
+            Assertions.assertTrue(lights);
+        }else Assertions.assertFalse(lights);
     }
 
     @Test
