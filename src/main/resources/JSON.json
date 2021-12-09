@@ -1,0 +1,27 @@
+{
+  "CarModel": "Fusion",
+  "CarBrand": "Ford",
+  "DescriptionOfCarSeats": [
+    "DriverSeats":
+    {
+      "material": "Leather",
+      "color": "Red"
+    },
+    "PassengerSeat":
+    {
+      "material": "Leather",
+      "color": "Red"
+    },
+    "DriverSeats":
+    {
+      "material": "Material",
+      "color": "Blue"
+    },
+    "PassengerSeat":
+    {
+      "material": "Material",
+      "color": "Blue"
+    }
+  ],
+  "Engine":"1.4"
+}
