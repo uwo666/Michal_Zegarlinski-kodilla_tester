@@ -39,5 +39,13 @@ public class CarFactoryTestSuite {
 
     @Test
    public void createCar2() {
+        //Given
+        ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
+        Car car = (Car) context.getBean("createCar2");
+        //When
+        String type = car.getCarType();
+        //Then
+        List<String> possibleTypes = Arrays.asList("SUV", "Sedan", "Cabrio");
+        Assertions.assertTrue(possibleTypes.contains(type));
     }
 }
