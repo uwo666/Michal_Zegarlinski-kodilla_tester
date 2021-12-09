@@ -12,12 +12,12 @@
       "material": "Leather",
       "color": "Red"
     },
-    "DriverSeats":
+    "BackLeftPassengerSeats":
     {
       "material": "Material",
       "color": "Blue"
     },
-    "PassengerSeat":
+    "BackRightPassengerSeat":
     {
       "material": "Material",
       "color": "Blue"
