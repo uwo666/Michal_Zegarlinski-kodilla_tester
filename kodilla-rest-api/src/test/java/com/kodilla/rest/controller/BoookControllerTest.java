@@ -34,8 +34,11 @@ public class BoookControllerTest {
         BookService bookServiceMock = Mockito.mock(BookService.class);
         BoookController bookController = new BoookController(bookServiceMock);
         BookDto bookDto = new BookDto("Title","Author");
+        Mockito.when(bookServiceMock.addBook(bookDto)).;
         //then
-        bookController.addBook(bookDto);
+
+        //then
+        assertEquals
 
     }
 
