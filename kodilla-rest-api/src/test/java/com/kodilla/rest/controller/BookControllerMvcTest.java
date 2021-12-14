@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @ExtendWith(MockitoExtension.class)
-@WebMvcTest(BoookController.class)
+@WebMvcTest(BookController.class)
 public class BookControllerMvcTest {
 
     @Autowired
@@ -42,5 +42,19 @@ public class BookControllerMvcTest {
                 .andExpect(MockMvcResultMatchers.jsonPath("$", Matchers.hasSize(2)));
     }
 
+    @Test
+    public void shouldAddBooks() throws Exception {
+        //Given
+        BookDto book = new BookDto("Don Quixote","Miguel de Cervantes");
+        //Then
+        String json = "{\"title\" : \"Don Quixote\",\"author\" : \"Miguel de Cervantes\"}";
+        mockMvc.perform(MockMvcRequestBuilders.post("/books")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(json))
+                .andExpect(MockMvcResultMatchers.status().is(200));
+
+
+        Mockito.verify(bookService, Mockito.times(1)).addBook(book);
+    }
 
 }

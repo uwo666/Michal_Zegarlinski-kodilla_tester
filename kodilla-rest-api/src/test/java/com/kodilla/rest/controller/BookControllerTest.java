@@ -10,13 +10,13 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class BoookControllerTest {
+public class BookControllerTest {
 
     @Test
     void shouldFetchBooks() {
         //given
         BookService bookServiceMock = Mockito.mock(BookService.class);
-        BoookController bookController = new BoookController(bookServiceMock);
+        BookController bookController = new BookController(bookServiceMock);
         List<BookDto> booksList = new ArrayList<>();
         booksList.add(new BookDto("Title 1", "Author 1"));
         booksList.add(new BookDto("Title 2", "Author 2"));
@@ -29,16 +29,17 @@ public class BoookControllerTest {
     }
 
     @Test
-    void shouldAddBook(){
+    public void shouldAddBook(){
         //given
         BookService bookServiceMock = Mockito.mock(BookService.class);
-        BoookController bookController = new BoookController(bookServiceMock);
-        BookDto bookDto = new BookDto("Title","Author");
-        Mockito.when(bookServiceMock.addBook(bookDto)).;
-        //then
+        BookController bookController = new BookController(bookServiceMock);
+        BookDto book = new BookDto("Title","Author");
+        //When
+        bookController.addBook(book);
+        //Then
+        Mockito.verify(bookServiceMock, Mockito.times(1)).addBook(book);
 
-        //then
-        assertEquals
+
 
     }
 
