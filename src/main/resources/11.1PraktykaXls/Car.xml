@@ -1,0 +1,16 @@
+<?xml version= "1.0" encoding= "UTF-8"?>
+<car name="car">
+    <type>Sedan</type>
+    <mark>Alfa Romeo</mark>
+        <model>156</model>
+           <engine>
+              <capacity>1.9</capacity>
+              <isElectric>false</isElectric>
+              <fuelType>Diesel</fuelType>
+              <horsePower>140</horsePower>
+              <acceleration>00:00:09</acceleration>
+           </engine>
+        <productionDate>14.12.2005</productionDate>
+        <allowedPackage>&lt; 500</allowedPackage>
+        <colour>black</colour>
+</car>
