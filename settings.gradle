@@ -12,4 +12,5 @@ include 'kodilla-spring-basic'
 include 'kodilla-rest-api'
 include 'SOUP'
 include 'SoupIU'
+include 'kodilla-selenium'
 
