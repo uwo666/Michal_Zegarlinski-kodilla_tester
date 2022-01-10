@@ -11,7 +11,7 @@ public class GoogleExample {
         System.setProperty("webdriver.chrome.driver", "c:\\selenium-drivers\\chrome\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.google.com");
-        driver.findElement(By.xpath("//*[@id=\"L2AGLb\"]/div")).click();
+        driver.findElement(By.xpath("//*[@id=\"L2AGLb\"]/div")).click(); // znajduje i klika w "zgadzam się" w wyskakujacej polityce prywatności googla
 
         WebElement inputField = driver.findElement(By.name("q"));
         inputField.sendKeys("Kodilla");
