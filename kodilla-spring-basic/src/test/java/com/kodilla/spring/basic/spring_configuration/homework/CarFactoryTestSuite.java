@@ -20,7 +20,7 @@ public class CarFactoryTestSuite {
         Car car = (Car) context.getBean("createCar");
         LocalTime time = LocalTime.now();
         boolean lights = car.hasHeadlightsTurnedOn();
-        if (time.isAfter(LocalTime.of(22, 0)) || time.isBefore(LocalTime.of(5, 0))){
+        if (time.isAfter(LocalTime.of(21, 0)) || time.isBefore(LocalTime.of(5, 0))){
             Assertions.assertTrue(lights);
         }else Assertions.assertFalse(lights);
     }
