@@ -27,5 +27,7 @@ public class TestGoogle {
         driver.findElement(By.xpath("//*[@id=\"L2AGLb\"]/div")).click();
         GoogleSearch googleSearch = new GoogleSearch(driver);
         googleSearch.searchResults();
+        
+
     }
 }

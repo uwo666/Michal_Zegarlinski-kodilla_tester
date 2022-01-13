@@ -15,7 +15,7 @@ public class GoogleSearch extends AbstractPage {
     @FindBy(css = "input[title='Szukaj']")
     static WebElement inputField;
 
-    @FindBy(css = "input[value='Szukaj w Google']")
+    @FindBy(xpath = "/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]")
     static List<WebElement> searchButton;
     private GoogleResults googleResults;
 
@@ -28,6 +28,7 @@ public class GoogleSearch extends AbstractPage {
         inputField.sendKeys("Kodilla");
         googleResults = loadResults(driver);
         googleResults.isSeeResults();
+        googleResults.clickRandomElement();
     }
 
     public GoogleResults loadResults(WebDriver driver) {

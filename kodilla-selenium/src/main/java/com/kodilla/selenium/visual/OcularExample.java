@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.nio.file.Paths;
 
 public class OcularExample {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "c:\\selenium-drivers\\chrome\\chromedriver.exe");
         WebDriver webDriver= new ChromeDriver();
 
@@ -18,6 +18,7 @@ public class OcularExample {
                 .saveSnapshot(true);
 
         WorldTimePage page = new WorldTimePage(webDriver);
+        Thread.sleep(3000);
         page.open();
         page.compare();
         page.close();
