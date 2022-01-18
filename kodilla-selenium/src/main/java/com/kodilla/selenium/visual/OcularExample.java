@@ -18,7 +18,7 @@ public class OcularExample {
                 .saveSnapshot(true);
 
         WorldTimePage page = new WorldTimePage(webDriver);
-        Thread.sleep(3000);
+        Thread.sleep(4000);
         page.open();
         page.compare();
         page.close();

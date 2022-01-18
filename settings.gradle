@@ -13,4 +13,5 @@ include 'kodilla-rest-api'
 include 'SoupIU'
 include 'kodilla-selenium'
 include 'kodilla-google-selenium'
+include 'kodilla-cucumber'
 
