@@ -36,87 +36,62 @@ public class WalletSteps implements En {
 
 //        Zadanie 14.3. Praktyczne wykorzystanie BDD
 
-        Given("I have deposited 100 in my wallet", () -> {
-            wallet.deposit(100);
-            throw new io.cucumber.java8.PendingException();
+        Given("I have deposited {int} in my wallet", (Integer int1) -> {
+            wallet.deposit(int1);
+//            throw new io.cucumber.java8.PendingException();
         });
 
-        When("I request 100", () -> {
-            cashier.withdraw(wallet, 100);
-            throw new io.cucumber.java8.PendingException();
+        When("I request {int}", (Integer int1) -> {
+            cashier.withdraw(wallet,int1);
+//            throw new io.cucumber.java8.PendingException();
         });
 
-        Then("$100 should be dispensed", () -> {
-            Assert.assertEquals(100, cashSlot.getContents());
-            throw new io.cucumber.java8.PendingException();
+        Then("{int} should be dispensed", (Integer int1) -> {
+            Assert.assertEquals(int1.intValue(), cashSlot.getContents()); // intValue pobiera samą wartość liczbową z integera
+//            throw new io.cucumber.java8.PendingException();
         });
+//
 
-        Given("I have deposited 300 in my wallet", () -> {
-            wallet.deposit(300);
-            throw new io.cucumber.java8.PendingException();
-        });
-
-        When("I request 0", () -> {
-            cashier.withdraw(wallet, 0);
-            throw new io.cucumber.java8.PendingException();
-        });
-
-        Then("$0 should be dispensed", () -> {
-            Assert.assertEquals(0, cashSlot.getContents());
-            throw new io.cucumber.java8.PendingException();
-        });
-
-        Given("I have deposited {int} in my wallet", () -> {
-            wallet.deposit(0);
-            throw new io.cucumber.java8.PendingException();
-        });
-
-        When("I request {int}", () -> {
-            cashier.withdraw(wallet, 0);
-            throw new io.cucumber.java8.PendingException();
-        });
-
-        Then("{int} should be dispensed", () -> {
-            Assert.assertEquals(0, cashSlot.getContents());
-            throw new io.cucumber.java8.PendingException();
-        });
 
 //        Zadanie 14.4. Rozszerzanie scenariuszy testowych
+
+        Given("there is $200 in my wallet", () -> {
+            wallet.deposit(200);
+//            throw new io.cucumber.java8.PendingException();
+        });
+
+        When("I check the balance of my wallet", () -> {
+            Assert.assertEquals("Incorrect wallet balance",200, wallet.getBalance());
+//            throw new io.cucumber.java8.PendingException();
+        });
+
+        Then("I should see that the balance is $200", () -> {
+            Assert.assertEquals(200, wallet.getBalance());
+//            throw new io.cucumber.java8.PendingException();
+        });
+
+
+
 
         Given("there is $100 in my wallet", () -> {
             wallet.deposit(100);
 //            throw new io.cucumber.java8.PendingException();
         });
 
-        When("I check the balance of my wallet", () -> {
-            Assert.assertEquals("Incorrect wallet balance",100, wallet.getBalance());
-//            throw new io.cucumber.java8.PendingException();
-        });
-
-        Then("I should see that the balance is $100", () -> {
-            wallet.getBalance();
-//            throw new io.cucumber.java8.PendingException();
-        });
-
-//        Given("there is $100 in my wallet", () -> {
-//            wallet.deposit(100);
-//            throw new io.cucumber.java8.PendingException();
-//        });
-
         When("I withdraw $200", () -> {
             cashier.withdraw(wallet, 200);
-            throw new io.cucumber.java8.PendingException();
+//            throw new io.cucumber.java8.PendingException();
         });
 
         Then("nothing should be dispensed", () -> {
             Assert.assertEquals("Incorrect wallet balance",100, wallet.getBalance());
-            throw new io.cucumber.java8.PendingException();
-        });
-//
-//        Then("I should be told that I don't have enough money in my wallet", () -> {
-//            // Write code here that turns the phrase above into concrete actions
 //            throw new io.cucumber.java8.PendingException();
-//        });
+        });
+
+        Then("I should be told that I don't have enough money in my wallet", () -> {
+            Assert.assertEquals("Incorrect wallet balance",100, wallet.getBalance());
+//            throw new io.cucumber.java8.PendingException();
+        });
 
     }
 }
