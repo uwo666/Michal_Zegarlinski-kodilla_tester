@@ -27,10 +27,11 @@ public class AllegroTestingAppCss {
         driver.findElement(By.cssSelector("#gh-btn")).click();
         WebDriverWait wait = new WebDriverWait(driver, 20);
         Thread.sleep(3000);
-        List<WebElement> element = driver.findElements(By.xpath("s-item__wrapper"));
-//        element.get(0).getText();
-//        element.get(0).findElement(By.tagName("div")).getText();
+        List<WebElement> element = driver.findElements(By.xpath("/html/body/div[5]/div[5]/div[2]/div[1]/div[2]/ul/li"));
+        element.get(0).getText();
+        String result = element.get(0).findElement(By.tagName("h3")).getText();
         System.out.println(element.size());
+        System.out.println(result);
 
 
     }

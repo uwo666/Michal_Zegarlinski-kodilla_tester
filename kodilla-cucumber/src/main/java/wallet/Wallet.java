@@ -15,7 +15,7 @@ public class Wallet {
     }
 
     public int getBalance() {
-        System.out.println("The balance is: " + balance);
+        System.out.println("The balance is: $" + balance);
         return balance;
     }
 }
