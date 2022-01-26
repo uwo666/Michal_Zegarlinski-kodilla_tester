@@ -26,7 +26,7 @@ public class TaskListRepositoryTestSuite {
         List<TaskList> myLists = taskListRepository.findByListName(name);
 
         //Then
-        Assertions.assertEquals(1, myLists.size());
+        Assertions.assertEquals(3, myLists.size());
 
 
     }
