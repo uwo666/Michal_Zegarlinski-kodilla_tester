@@ -40,6 +40,13 @@ public class KlasaDoZabawy {
         System.out.println(mapaFull);
      System.out.println(marka);
      System.out.println(output);
+
+     Map<String, Map<Integer, List<String>>> output2 = mapaFull.entrySet().stream()
+             .filter(entry -> entry.getKey().matches("ford"))
+             .collect(Collectors.toMap(Map.Entry :: getKey, Map.Entry ::getValue));
+     System.out.println(output2);
     }
+
+
 
 }
